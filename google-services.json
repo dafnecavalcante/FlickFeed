@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "142480201089",
+    "project_id": "flickfeed-20231",
+    "storage_bucket": "flickfeed-20231.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142480201089:android:d914b3865eac5db1c88480",
+        "android_client_info": {
+          "package_name": "com.swmansion.gesturehandler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142480201089-c7f64n4a6sog5kcnifmg94lbdpcrub46.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHSZKoITmqjOX8btMylxulTzcWufHlS6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142480201089-c7f64n4a6sog5kcnifmg94lbdpcrub46.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
