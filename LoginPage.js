@@ -1,14 +1,26 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet, Image } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Image, Text } from 'react-native';
 
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleLogin = () => {
-    console.log(`Email: ${email}, Password: ${password}`);
-    navigation.navigate('HomeScreen');
+    const fixedEmail = 'dafne.cavalcante@gmail.com';
+    const fixedPassword = '123456789';
+  
+    if (email !== fixedEmail || password !== fixedPassword) {
+      setErrorMessage('Email ou senha incorretos');
+      setEmail(''); // Limpa o campo de email
+      setPassword(''); // Limpa o campo de senha
+    } else {
+      setErrorMessage(''); // Limpa a mensagem de erro
+      console.log(`Email: ${fixedEmail}, Password: ${fixedPassword}`);
+      navigation.navigate('HomeScreen');
+    }
   };
+  
 
   return (
     <View style={styles.container}>
@@ -27,6 +39,7 @@ const Login = ({ navigation }) => {
         secureTextEntry
       />
       <Button title="Entrar" onPress={handleLogin} />
+      {errorMessage !== '' && <Text style={styles.error}>{errorMessage}</Text>}
     </View>
   );
 };
@@ -49,6 +62,10 @@ const styles = StyleSheet.create({
     width: 200,
     height: 80,
     marginBottom: 30,
+  },
+  error: {
+    color: 'red',
+    marginTop: 10,
   },
 });
 
